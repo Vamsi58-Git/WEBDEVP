@@ -1,22 +1,3 @@
-// Import Firebase SDKs
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyAcbZrdJeQxQwQaIW1_VAwSiNTJNQLqxyc",
-  authDomain: "lancercom-871f2.firebaseapp.com",
-  projectId: "lancercom-871f2",
-  storageBucket: "lancercom-871f2.firebasestorage.app",
-  messagingSenderId: "243857905711",
-  appId: "1:243857905711:web:eda055f854668ca6c74eda",
-  measurementId: "G-TJ79MCZWFC"
-};
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
-const authLink = document.getElementById('authLink'); // or 'authBtn' for button
 
 document.addEventListener("DOMContentLoaded", () => {
   // All DOM manipulation code should go inside this block
@@ -58,21 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
       selectedOptionInput.value = optionName;
     });
   });
-
- /* document.getElementById('agreement-form-data').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const projectName = document.getElementById('project-name').value;
-    const amount = document.getElementById('amount').value;
-    const dueDate = document.getElementById('due-date').value;
-    const selectedOption = document.getElementById('selected-option').value;
-
-    alert(`Agreement Created!\nPayment Option: ${selectedOption}\nProject: ${projectName}\nAmount: $${amount}\nDue Date: ${dueDate}`);
-
-    this.reset();
-    document.getElementById('agreement-form').style.display = 'none';
-  });*/
-
   const reviews = [
     {
       text: "Lancer.com helped us find an amazing transcriptionist. She is fast, accurate, and affordable!",
